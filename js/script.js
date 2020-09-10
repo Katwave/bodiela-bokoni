@@ -61,3 +61,47 @@ window.addEventListener("scroll", (e) => {
 window.addEventListener("load", (e) => {
   document.getElementsByClassName("loader")[0].style = "display:none";
 });
+
+// Cursor on mousemove
+
+class followMouse {
+  constructor(cursor, body) {
+    this.cursor = cursor;
+    this.body = body;
+  }
+  follow(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+
+    if (x <= this.body.clientWidth - 20) {
+      this.cursor.style.left = `${x}px`;
+      this.cursor.style.top = `${y}px`;
+    } else {
+      this.cursor.style.left = `${x - 20}px`;
+      this.cursor.style.top = `${y - 20}px`;
+    }
+  }
+}
+
+const cursor = document.getElementsByClassName("cursor")[0];
+const body = document.getElementsByTagName("body")[0];
+
+const cursorFollowed = new followMouse(cursor, body);
+
+document.addEventListener("mousemove", (e) => {
+  cursorFollowed.follow(e);
+});
+
+// Hover on images
+
+const cards = document.getElementsByClassName("cards");
+
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("mouseover", (e) => {
+    cursor.style =
+      "width: 200px; height: 200px; border: 8px dotted rgba(255,255,255, 0.5);background:rgba(255,255,255, 0.5);";
+  });
+  cards[i].addEventListener("mouseleave", (e) => {
+    cursor.style = "width: 50px; height: 50px; ";
+  });
+}

@@ -196,11 +196,37 @@ main .introContainer a {
   background: #914dff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 1;
 }
 
 main .introContainer a:hover {
-  color: #914dff;
+  color: #a060df;
+}
+
+main .introContainer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   background: #fff;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  border-radius: 4px;
+}
+
+main .introContainer a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 main .introContainer span.line {
@@ -277,25 +303,68 @@ section .cardsContainer .cards {
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
 }
 
-section .cardsContainer .cards .cardImage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-section .cardsContainer .cards .cardImage img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-
 section .cardsContainer .cards .cardText {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: transparent;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  opacity: 0;
+}
+
+section .cardsContainer .cards a {
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 5px;
+  background: #914dff;
+  position: relative;
+  z-index: 1;
+}
+
+section .cardsContainer .cards a:hover {
+  color: #a060df;
+}
+
+section .cardsContainer .cards a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  border-radius: 4px;
+}
+
+section .cardsContainer .cards a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+section .cardsContainer .cards:hover .cardText {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,21 +380,23 @@ section .cardsContainer .cards .cardText {
           flex-direction: column;
 }
 
-section .cardsContainer .cards .cardText a {
-  font-size: 24px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 5px;
-  background: #914dff;
-}
-
-section .cardsContainer .cards .cardText p {
+section .cardsContainer .cards:hover .cardText p {
   font-size: 24px;
   margin-bottom: 20px;
   color: #fff;
   text-align: center;
+}
+
+section .cardsContainer .cardImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section .cardsContainer .cardImage img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 section .cardsContainer .cards:nth-child(2) {
@@ -668,6 +739,23 @@ section .contactForm form button {
   100% {
     background-position: 0%;
   }
+}
+
+.cursor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
 }
 
 .previewContainer {
