@@ -1,0 +1,542 @@
+// Variables
+$backgroundColor: #ddd;
+$color: #000;
+$linkBackground: rgb(145, 77, 255);
+$lineBackground: rgb(145, 77, 255);
+
+// Mixins
+@mixin flexCenter($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin shadow {
+  box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
+}
+
+@mixin links {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 5px;
+}
+
+@mixin ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: $backgroundColor;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  @include flexCenter(row);
+  z-index: 100;
+
+  .navContainer {
+    width: 90%;
+    @include flexCenter(row);
+    background: transparent;
+
+    .logo {
+      width: 40%;
+      height: 100%;
+
+      a {
+        font-size: 28px;
+        text-decoration: none;
+        margin-left: 12px;
+        @include links();
+        color: #fff;
+      }
+    }
+
+    .navLinks {
+      width: 60%;
+      height: 100%;
+      @include flexCenter(row);
+      justify-content: flex-end;
+
+      ul {
+        @include ul();
+        li {
+          display: inline-flex;
+          margin-right: 12px;
+          a {
+            font-size: 20px;
+            @include links();
+            padding: 30px 15px;
+            color: rgb(255, 255, 255);
+            transition: all 300ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../img/14.jpg");
+  background-position: center;
+  background-size: cover;
+  @include flexCenter(column);
+
+  .introBlackCover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #000;
+    z-index: 1;
+  }
+
+  .introContainer {
+    width: 60%;
+    height: fit-content;
+    background: transparent;
+    align-self: flex-start;
+    margin-left: 12%;
+    @include flexCenter(column);
+    align-items: flex-start;
+    z-index: 99;
+    color: #fff;
+
+    h1 {
+      font-size: 5em;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 3em;
+      font-weight: 500;
+    }
+    a {
+      margin-top: 50px;
+      @include links();
+      padding: 12px 40px;
+      border-radius: 5px;
+      font-size: 24px;
+      background: rgb(145, 77, 255);
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: rgb(145, 77, 255);
+        background: #fff;
+      }
+    }
+    span.line {
+      width: 40%;
+      height: 6px;
+      background: rgb(145, 77, 255);
+      margin-top: 40px;
+    }
+  }
+}
+
+section {
+  background: transparent;
+  width: 100%;
+  @include flexCenter(column);
+
+  .servicesText {
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+    margin-top: 8%;
+
+    background: transparent;
+    h1 {
+      font-size: 6em;
+      text-align: center;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 30px;
+      color: $linkBackground;
+    }
+
+    div.line {
+      width: 100%;
+      height: 6px;
+
+      margin-top: 40px;
+      border: 10px solid $lineBackground;
+    }
+  }
+
+  .cardsContainer {
+    width: 96%;
+    background: transparent;
+    margin-top: 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px;
+    grid-gap: 40px;
+    grid-auto-columns: 300px;
+    grid-auto-rows: 300px;
+
+    .cards {
+      background: rgb(160, 96, 223);
+      position: relative;
+      @include shadow();
+
+      .cardImage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          filter: brightness(0.5);
+        }
+      }
+
+      .cardText {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        @include flexCenter(column);
+        a {
+          font-size: 24px;
+          font-weight: 500;
+          @include links();
+          background: $linkBackground;
+        }
+
+        p {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    .cards:nth-child(2) {
+      background: rgb(160, 96, 223);
+      grid-column: 2;
+    }
+    .cards:nth-child(5) {
+      background: rgb(160, 96, 223);
+      grid-column: 2;
+      grid-row: 2 / span 2;
+    }
+    .cards:nth-child(10) {
+      background: rgb(160, 96, 223);
+      grid-row: 3 / span 2;
+    }
+    .cards:nth-child(11) {
+      background: rgb(160, 96, 223);
+      grid-row: span 2;
+    }
+  }
+
+  //   About
+  .aboutContainer {
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    background: transparent;
+    h1 {
+      font-size: 6em;
+      text-align: center;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 30px;
+      color: $linkBackground;
+    }
+
+    div.line {
+      width: 100%;
+      height: 6px;
+
+      margin-top: 40px;
+      border: 10px solid $lineBackground;
+    }
+  }
+
+  .aboutInfoContainer {
+    margin-top: 9%;
+    width: 100%;
+    padding: 15px;
+    @include flexCenter(column);
+
+    .aboutInfo {
+      width: 80%;
+      height: 80vh;
+      background: #fff;
+      @include flexCenter(row);
+      @include shadow();
+
+      .aboutImage {
+        width: 60%;
+        height: 100%;
+        background: transparent;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .aboutText {
+        width: 40%;
+        height: 100%;
+        background: transparent;
+        @include flexCenter(column);
+        padding: 14px;
+        div {
+          margin-top: 30px;
+          a {
+            @include links();
+            background: $linkBackground;
+            @include shadow();
+            margin-right: 15px;
+            transition: all 300ms ease-in-out;
+            &:hover {
+              background: #fff;
+              color: $linkBackground;
+              @include shadow();
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 24px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 3em;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  //   Contact
+  .contactText {
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    background: transparent;
+    h1 {
+      font-size: 6em;
+      text-align: center;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 30px;
+      color: $linkBackground;
+    }
+
+    div.line {
+      width: 100%;
+      height: 6px;
+
+      margin-top: 40px;
+      border: 10px solid $lineBackground;
+    }
+  }
+
+  .contactForm {
+    margin-top: 5%;
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    @include flexCenter(column);
+
+    form label {
+      font-size: 24px;
+    }
+    form input {
+      width: 700px;
+      height: 50px;
+      font-size: 20px;
+      padding: 10px;
+      outline: none;
+      border: 3px solid rgb(160, 96, 223);
+      border-radius: 10px;
+      box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
+    }
+    form textarea {
+      width: 700px;
+      height: 50px;
+      resize: none;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
+      outline: none;
+      border: 3px solid rgb(160, 96, 223);
+    }
+
+    form button {
+      width: 700px;
+      height: 50px;
+      border: none;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+      background: $linkBackground;
+      color: #fff;
+      font-size: 22px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  }
+}
+
+.previewContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  z-index: 101;
+  @include flexCenter(column);
+  transition: 0.7s;
+  display: none;
+  animation: animatePreview 0.4s linear 1;
+  @keyframes animatePreview {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  // .hamBTN-open {
+  //   background: transparent;
+  //   width: 50px;
+  //   height: 50px;
+  //   border: none;
+  //   border-radius: 5px;
+  //   cursor: pointer;
+  //   position: absolute;
+  //   right: 2%;
+  //   display: block;
+  //   outline: none;
+  //   border: 2px solid #fff;
+  //   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5),
+  //     -2px -2px 4px rgba(255, 255, 255, 0.3);
+  // }
+  // .hamBTN-open span {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 35px;
+  //   height: 3px;
+  //   background: #fff;
+  //   animation: hamOpen 0.4s linear 1;
+  // }
+  // @keyframes hamOpen {
+  //   0% {
+  //     transform: rotateY(120deg);
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
+  // .hamBTN-open span:nth-child(2) {
+  //   top: 30%;
+  //   animation: hamOpen 0.4s linear 1;
+  // }
+  // .hamBTN-open span:nth-child(3) {
+  //   top: 70%;
+  //   animation: hamOpen 0.4s linear 1;
+  // }
+  .hamBTN-close {
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    display: block;
+    outline: none;
+    border: 2px solid #fff;
+  }
+  .hamBTN-close span {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    transform: rotate(50deg);
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    animation: hamClose 0.4s linear 1;
+  }
+  @keyframes hamClose {
+    0% {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .hamBTN-close span:nth-child(2) {
+    transform: rotate(-50deg);
+    right: 10%;
+    animation: hamClose 0.4s linear 1;
+  }
+
+  .imagePreview {
+    width: 70%;
+    height: 85%;
+    background: black;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  margin-top: 8%;
+  background: rgb(30, 29, 31);
+  padding: 20px 0px;
+  p {
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+  }
+}
