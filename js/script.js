@@ -58,6 +58,6 @@ window.addEventListener("scroll", (e) => {
 
 // Loader spinner
 
-window.addEventListener("load", (e) => {
-  document.getElementsByClassName("loader")[0].style = "display:none";
-});
+// window.addEventListener("load", (e) => {
+//   document.getElementsByClassName("loader")[0].style = "display:none";
+// });
