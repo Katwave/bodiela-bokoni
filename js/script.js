@@ -55,3 +55,9 @@ window.addEventListener("scroll", (e) => {
   }
   console.log(this.scrollY);
 });
+
+// Loader spinner
+
+window.addEventListener("load", (e) => {
+  document.getElementsByClassName("loader")[0].style = "display:none";
+});
