@@ -43,9 +43,10 @@ const links = document.getElementsByClassName("links");
 window.addEventListener("scroll", (e) => {
   let scr = this.scrollY;
   if (scr >= 10) {
-    nav.style = "background:  #ddd; box-shadow: 6px 6px 36px rgba(0,0,0,.3);";
+    nav.style =
+      "background:  rgb(145, 77, 255); box-shadow: 8px 8px 40px rgba(0,0,0,0.5);";
     for (let i = 0; i < links.length; i++) {
-      links[i].style = "color:  #222;";
+      links[i].style = "color:  #fff;";
     }
   } else {
     nav.style = "background: transparent";
@@ -60,6 +61,7 @@ window.addEventListener("scroll", (e) => {
 
 window.addEventListener("load", (e) => {
   document.getElementsByClassName("loader")[0].style = "display:none";
+  cursor.style = "display:block";
 });
 
 // Cursor on mousemove
@@ -92,16 +94,19 @@ document.addEventListener("mousemove", (e) => {
   cursorFollowed.follow(e);
 });
 
-// Hover on images
+// Navigetion menu for mobile devices
 
-const cards = document.getElementsByClassName("cards");
+const hamburgerNav = document.getElementsByClassName("hamburgerNav")[0];
+const openNav = document.getElementsByClassName("hamBTN-open")[0];
+const closeNav = document.getElementById("closeNav");
 
-for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener("mouseover", (e) => {
-    cursor.style =
-      "width: 200px; height: 200px; border: 8px dotted rgba(255,255,255, 0.5);background:rgba(255,255,255, 0.5);";
-  });
-  cards[i].addEventListener("mouseleave", (e) => {
-    cursor.style = "width: 50px; height: 50px; ";
-  });
-}
+openNav.addEventListener("click", () => {
+  hamburgerNav.style = "display:flex";
+  openNav.style = "display:none";
+  closeNav.style = "display:block";
+});
+closeNav.addEventListener("click", () => {
+  hamburgerNav.style = "display:none";
+  openNav.style = "display:block";
+  closeNav.style = "display:none";
+});
