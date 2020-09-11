@@ -1266,31 +1266,30 @@ section .contactForm form button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  -webkit-animation: animateSpin 6s linear infinite;
-          animation: animateSpin 6s linear infinite;
-  -webkit-box-shadow: inset -6px -6px 30px rgba(0, 0, 0, 0.5);
-          box-shadow: inset -6px -6px 30px rgba(0, 0, 0, 0.5);
+  animation: animateSpin 6s alternate-reverse infinite;
+  -webkit-box-shadow: inset -6px -6px 30px rgba(255, 204, 95, 0.5), 8px 8px 40px rgba(0, 0, 0, 0.3);
+          box-shadow: inset -6px -6px 30px rgba(255, 204, 95, 0.5), 8px 8px 40px rgba(0, 0, 0, 0.3);
 }
 
 @-webkit-keyframes animateSpin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(360deg) skewX(20deg);
+            transform: rotate(360deg) skewX(20deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg) skewX(0deg);
+            transform: rotate(360deg) skewX(0deg);
   }
 }
 
 @keyframes animateSpin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(360deg) skewX(20deg);
+            transform: rotate(360deg) skewX(20deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg) skewX(0deg);
+            transform: rotate(360deg) skewX(0deg);
   }
 }
 
@@ -1298,8 +1297,8 @@ section .contactForm form button {
   font-size: 2em;
   font-weight: 600;
   color: transparent;
-  background: -webkit-gradient(linear, left top, right top, from(#7a4afc), color-stop(#49f3ff), to(#15ff00));
-  background: linear-gradient(to right, #7a4afc, #49f3ff, #15ff00);
+  background: -webkit-gradient(linear, left top, right top, from(#110e1a), color-stop(#162324), to(#142212));
+  background: linear-gradient(to right, #110e1a, #162324, #142212);
   background-size: 400%;
   -webkit-background-clip: text;
   -webkit-animation: animateGradient 16s linear infinite;

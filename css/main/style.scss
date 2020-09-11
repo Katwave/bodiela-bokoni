@@ -949,15 +949,16 @@ section {
     height: 100px;
     border-radius: 50%;
     // border: 2px solid #fff;
-    animation: animateSpin 6s linear infinite;
+    animation: animateSpin 6s alternate-reverse infinite;
     // @include shadow();
-    box-shadow: inset -6px -6px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -6px -6px 30px rgba(255, 204, 95, 0.5),
+      8px 8px 40px rgba(0, 0, 0, 0.3);
     @keyframes animateSpin {
       0% {
-        transform: rotate(0deg);
+        transform: rotate(360deg) skewX(20deg);
       }
       100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg) skewX(0deg);
       }
     }
   }
@@ -968,9 +969,9 @@ section {
     color: transparent;
     background: linear-gradient(
       to right,
-      rgb(122, 74, 252),
-      rgb(73, 243, 255),
-      rgb(21, 255, 0)
+      rgb(17, 14, 26),
+      rgb(22, 35, 36),
+      rgb(20, 34, 18)
     );
     background-size: 400%;
     -webkit-background-clip: text;
