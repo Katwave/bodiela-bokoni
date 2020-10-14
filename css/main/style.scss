@@ -1,8 +1,8 @@
 // Variables
 $backgroundColor: #ddd;
 $color: #000;
-$linkBackground: rgb(145, 77, 255);
-$lineBackground: rgb(145, 77, 255);
+$linkBackground: rgb(255, 238, 0);
+$lineBackground: rgb(255, 252, 60);
 
 // Mixins
 @mixin flexCenter($dir) {
@@ -217,13 +217,14 @@ nav {
     }
   }
   @media screen and (max-width: 750px) {
-    background: rgb(145, 77, 255);
+    background: $linkBackground;
   }
 }
 
 .hamburgerNav {
   position: fixed;
-  top: 9.3%;
+  // top: 9%;
+  margin-top: 60px;
   right: 0;
   width: 100%;
   padding: 10px;
@@ -233,7 +234,7 @@ nav {
   display: none;
   animation: animate-ham-menu 0.5s linear 1;
   border-radius: 5px;
-  box-shadow: 6px 6px 40px rgba(145, 77, 255, 0.4);
+  box-shadow: 6px 6px 40px rgba(255, 251, 0, 0.4);
   @keyframes animate-ham-menu {
     0% {
       transform: translate(0, -100%);
@@ -265,7 +266,7 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../img/14.jpg");
+  background: url("../../img/9.jpg");
   background-position: center;
   background-size: cover;
   @include flexCenter(column);
@@ -304,12 +305,12 @@ main {
       padding: 12px 40px;
       border-radius: 5px;
       font-size: 24px;
-      background: rgb(145, 77, 255);
+      background: $linkBackground;
       transition: all 300ms ease-in-out;
       position: relative;
       z-index: 1;
       &:hover {
-        color: rgb(160, 96, 223);
+        color: $linkBackground;
       }
       &::after {
         content: "";
@@ -333,7 +334,7 @@ main {
     span.line {
       width: 40%;
       height: 6px;
-      background: rgb(145, 77, 255);
+      background: $linkBackground;
       margin-top: 40px;
     }
 
@@ -472,7 +473,7 @@ section {
     grid-auto-rows: 300px;
 
     .cards {
-      background: rgb(160, 96, 223);
+      background: $lineBackground;
       position: relative;
       @include shadow();
 
@@ -494,7 +495,7 @@ section {
         position: relative;
         z-index: 1;
         &:hover {
-          color: rgb(160, 96, 223);
+          color: $linkBackground;
         }
         &::after {
           content: "";
@@ -550,19 +551,19 @@ section {
     }
 
     .cards:nth-child(2) {
-      background: rgb(160, 96, 223);
+      background: $linkBackground;
     }
     .cards:nth-child(5) {
-      background: rgb(160, 96, 223);
+      background: $linkBackground;
 
       grid-row: span 2;
     }
     .cards:nth-child(10) {
-      background: rgb(160, 96, 223);
+      background: $linkBackground;
       grid-row: span 2;
     }
     .cards:nth-child(11) {
-      background: rgb(160, 96, 223);
+      background: $linkBackground;
       grid-row: span 2;
     }
 
@@ -832,7 +833,7 @@ section {
       font-size: 20px;
       padding: 10px;
       outline: none;
-      border: 3px solid rgb(160, 96, 223);
+      border: 3px solid $linkBackground;
       border-radius: 10px;
       box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
     }
@@ -845,7 +846,7 @@ section {
       border-radius: 10px;
       box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
       outline: none;
-      border: 3px solid rgb(160, 96, 223);
+      border: 3px solid $linkBackground;
     }
 
     form button {
@@ -1000,7 +1001,7 @@ section {
   height: 50px;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.5);
-  background: rgba(145, 77, 255, 0.5);
+  background: rgba(255, 251, 0, 0.5);
   z-index: 101;
   transition: all 0.1s ease-out;
   pointer-events: none;
@@ -1031,7 +1032,7 @@ section {
   }
 
   .hamBTN-close {
-    background: rgb(145, 77, 255);
+    background: $linkBackground;
     width: 50px;
     height: 50px;
     border: none;

@@ -287,13 +287,13 @@ nav .navContainer .navLinks ul li a {
 
 @media screen and (max-width: 750px) {
   nav {
-    background: #914dff;
+    background: #ffee00;
   }
 }
 
 .hamburgerNav {
   position: fixed;
-  top: 9.3%;
+  margin-top: 60px;
   right: 0;
   width: 100%;
   padding: 10px;
@@ -316,8 +316,8 @@ nav .navContainer .navLinks ul li a {
   -webkit-animation: animate-ham-menu 0.5s linear 1;
           animation: animate-ham-menu 0.5s linear 1;
   border-radius: 5px;
-  -webkit-box-shadow: 6px 6px 40px rgba(145, 77, 255, 0.4);
-          box-shadow: 6px 6px 40px rgba(145, 77, 255, 0.4);
+  -webkit-box-shadow: 6px 6px 40px rgba(255, 251, 0, 0.4);
+          box-shadow: 6px 6px 40px rgba(255, 251, 0, 0.4);
 }
 
 @-webkit-keyframes animate-ham-menu {
@@ -367,7 +367,7 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../img/14.jpg");
+  background: url("../../img/9.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -442,7 +442,7 @@ main .introContainer a {
   padding: 12px 40px;
   border-radius: 5px;
   font-size: 24px;
-  background: #914dff;
+  background: #ffee00;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   position: relative;
@@ -450,7 +450,7 @@ main .introContainer a {
 }
 
 main .introContainer a:hover {
-  color: #a060df;
+  color: #ffee00;
 }
 
 main .introContainer a::after {
@@ -481,7 +481,7 @@ main .introContainer a:hover::after {
 main .introContainer span.line {
   width: 40%;
   height: 6px;
-  background: #914dff;
+  background: #ffee00;
   margin-top: 40px;
 }
 
@@ -604,14 +604,14 @@ section .servicesText h1 {
 section .servicesText p {
   text-align: center;
   font-size: 30px;
-  color: #914dff;
+  color: #ffee00;
 }
 
 section .servicesText div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #914dff;
+  border: 10px solid #fffc3c;
 }
 
 @media screen and (max-width: 1000px) {
@@ -660,7 +660,7 @@ section .cardsContainer {
 }
 
 section .cardsContainer .cards {
-  background: #a060df;
+  background: #fffc3c;
   position: relative;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
@@ -688,13 +688,13 @@ section .cardsContainer .cards a {
   color: #fff;
   padding: 12px 22px;
   border-radius: 5px;
-  background: #914dff;
+  background: #ffee00;
   position: relative;
   z-index: 1;
 }
 
 section .cardsContainer .cards a:hover {
-  color: #a060df;
+  color: #ffee00;
 }
 
 section .cardsContainer .cards a::after {
@@ -763,21 +763,21 @@ section .cardsContainer .cardImage img {
 }
 
 section .cardsContainer .cards:nth-child(2) {
-  background: #a060df;
+  background: #ffee00;
 }
 
 section .cardsContainer .cards:nth-child(5) {
-  background: #a060df;
+  background: #ffee00;
   grid-row: span 2;
 }
 
 section .cardsContainer .cards:nth-child(10) {
-  background: #a060df;
+  background: #ffee00;
   grid-row: span 2;
 }
 
 section .cardsContainer .cards:nth-child(11) {
-  background: #a060df;
+  background: #ffee00;
   grid-row: span 2;
 }
 
@@ -836,14 +836,14 @@ section .aboutContainer h1 {
 section .aboutContainer p {
   text-align: center;
   font-size: 30px;
-  color: #914dff;
+  color: #ffee00;
 }
 
 section .aboutContainer div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #914dff;
+  border: 10px solid #fffc3c;
 }
 
 @media screen and (max-width: 1000px) {
@@ -956,7 +956,7 @@ section .aboutInfoContainer .aboutInfo .aboutText div a {
   color: #fff;
   padding: 12px 22px;
   border-radius: 5px;
-  background: #914dff;
+  background: #ffee00;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
   margin-right: 15px;
@@ -966,7 +966,7 @@ section .aboutInfoContainer .aboutInfo .aboutText div a {
 
 section .aboutInfoContainer .aboutInfo .aboutText div a:hover {
   background: #fff;
-  color: #914dff;
+  color: #ffee00;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
   font-weight: 700;
@@ -1067,14 +1067,14 @@ section .contactText h1 {
 section .contactText p {
   text-align: center;
   font-size: 30px;
-  color: #914dff;
+  color: #ffee00;
 }
 
 section .contactText div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #914dff;
+  border: 10px solid #fffc3c;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1137,7 +1137,7 @@ section .contactForm form input {
   font-size: 20px;
   padding: 10px;
   outline: none;
-  border: 3px solid #a060df;
+  border: 3px solid #ffee00;
   border-radius: 10px;
   -webkit-box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
           box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
@@ -1153,7 +1153,7 @@ section .contactForm form textarea {
   -webkit-box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
           box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
   outline: none;
-  border: 3px solid #a060df;
+  border: 3px solid #ffee00;
 }
 
 section .contactForm form button {
@@ -1164,7 +1164,7 @@ section .contactForm form button {
   padding: 10px;
   border-radius: 10px;
   outline: none;
-  background: #914dff;
+  background: #ffee00;
   color: #fff;
   font-size: 22px;
   margin-top: 30px;
@@ -1339,7 +1339,7 @@ section .contactForm form button {
   height: 50px;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.5);
-  background: rgba(145, 77, 255, 0.5);
+  background: rgba(255, 251, 0, 0.5);
   z-index: 101;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -1399,7 +1399,7 @@ section .contactForm form button {
 }
 
 .previewContainer .hamBTN-close {
-  background: #914dff;
+  background: #ffee00;
   width: 50px;
   height: 50px;
   border: none;

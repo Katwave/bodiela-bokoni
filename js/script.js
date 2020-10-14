@@ -44,7 +44,7 @@ window.addEventListener("scroll", (e) => {
   let scr = this.scrollY;
   if (scr >= 10) {
     nav.style =
-      "background:  rgb(145, 77, 255); box-shadow: 8px 8px 40px rgba(0,0,0,0.5);";
+      "background:   rgb(255, 251, 0); box-shadow: 8px 8px 40px rgba(0,0,0,0.5);";
     for (let i = 0; i < links.length; i++) {
       links[i].style = "color:  #fff;";
     }
