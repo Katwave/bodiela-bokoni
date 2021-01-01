@@ -69,6 +69,10 @@ nav .navContainer .logo a {
   color: #fff;
 }
 
+nav .navContainer .logo a:hover {
+  color: #0084d1;
+}
+
 @media screen and (max-width: 750px) {
   nav .navContainer .logo {
     width: 70%;
@@ -112,6 +116,10 @@ nav .navContainer .navLinks a {
   border-radius: 5px;
   padding: 5px;
   font-weight: 500;
+}
+
+nav .navContainer .navLinks a:hover {
+  color: #0084d1;
 }
 
 nav .navContainer .navLinks .hamBTN-open {
@@ -259,6 +267,10 @@ nav .navContainer .navLinks ul li a {
   transition: all 300ms ease-in-out;
 }
 
+nav .navContainer .navLinks ul li a:hover {
+  color: #0084d1;
+}
+
 @media screen and (max-width: 750px) {
   nav .navContainer .navLinks {
     width: 30%;
@@ -287,7 +299,7 @@ nav .navContainer .navLinks ul li a {
 
 @media screen and (max-width: 750px) {
   nav {
-    background: #d1c300;
+    background: #0084d1;
   }
 }
 
@@ -367,7 +379,7 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../img/9.jpg");
+  background: url("../../img/4.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -424,12 +436,12 @@ main .introContainer {
 }
 
 main .introContainer h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 500;
 }
 
 main .introContainer h2 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 500;
 }
 
@@ -442,7 +454,7 @@ main .introContainer a {
   padding: 12px 40px;
   border-radius: 5px;
   font-size: 24px;
-  background: #d1c300;
+  background: #0084d1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   position: relative;
@@ -450,7 +462,11 @@ main .introContainer a {
 }
 
 main .introContainer a:hover {
-  color: #d1c300;
+  color: #0084d1;
+}
+
+main .introContainer a:hover {
+  color: #0084d1;
 }
 
 main .introContainer a::after {
@@ -481,7 +497,7 @@ main .introContainer a:hover::after {
 main .introContainer span.line {
   width: 40%;
   height: 6px;
-  background: #d1c300;
+  background: #0084d1;
   margin-top: 40px;
 }
 
@@ -604,14 +620,14 @@ section .servicesText h1 {
 section .servicesText p {
   text-align: center;
   font-size: 30px;
-  color: #d1c300;
+  color: #0084d1;
 }
 
 section .servicesText div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #fffc3c;
+  border: 10px solid #91d7ff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -660,7 +676,7 @@ section .cardsContainer {
 }
 
 section .cardsContainer .cards {
-  background: #fffc3c;
+  background: #91d7ff;
   position: relative;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
@@ -688,13 +704,17 @@ section .cardsContainer .cards a {
   color: #fff;
   padding: 12px 22px;
   border-radius: 5px;
-  background: #d1c300;
+  background: #0084d1;
   position: relative;
   z-index: 1;
 }
 
 section .cardsContainer .cards a:hover {
-  color: #d1c300;
+  color: #0084d1;
+}
+
+section .cardsContainer .cards a:hover {
+  color: #0084d1;
 }
 
 section .cardsContainer .cards a::after {
@@ -763,21 +783,21 @@ section .cardsContainer .cardImage img {
 }
 
 section .cardsContainer .cards:nth-child(2) {
-  background: #d1c300;
+  background: #0084d1;
 }
 
 section .cardsContainer .cards:nth-child(5) {
-  background: #d1c300;
+  background: #0084d1;
   grid-row: span 2;
 }
 
 section .cardsContainer .cards:nth-child(10) {
-  background: #d1c300;
+  background: #0084d1;
   grid-row: span 2;
 }
 
 section .cardsContainer .cards:nth-child(11) {
-  background: #d1c300;
+  background: #0084d1;
   grid-row: span 2;
 }
 
@@ -836,14 +856,14 @@ section .aboutContainer h1 {
 section .aboutContainer p {
   text-align: center;
   font-size: 30px;
-  color: #d1c300;
+  color: #0084d1;
 }
 
 section .aboutContainer div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #fffc3c;
+  border: 10px solid #91d7ff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -956,7 +976,7 @@ section .aboutInfoContainer .aboutInfo .aboutText div a {
   color: #fff;
   padding: 12px 22px;
   border-radius: 5px;
-  background: #d1c300;
+  background: #0084d1;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
   margin-right: 15px;
@@ -965,8 +985,12 @@ section .aboutInfoContainer .aboutInfo .aboutText div a {
 }
 
 section .aboutInfoContainer .aboutInfo .aboutText div a:hover {
+  color: #0084d1;
+}
+
+section .aboutInfoContainer .aboutInfo .aboutText div a:hover {
   background: #fff;
-  color: #d1c300;
+  color: #0084d1;
   -webkit-box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 6px 36px rgba(0, 0, 0, 0.3);
   font-weight: 700;
@@ -1067,14 +1091,14 @@ section .contactText h1 {
 section .contactText p {
   text-align: center;
   font-size: 30px;
-  color: #d1c300;
+  color: #0084d1;
 }
 
 section .contactText div.line {
   width: 100%;
   height: 6px;
   margin-top: 40px;
-  border: 10px solid #fffc3c;
+  border: 10px solid #91d7ff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1137,7 +1161,7 @@ section .contactForm form input {
   font-size: 20px;
   padding: 10px;
   outline: none;
-  border: 3px solid #d1c300;
+  border: 3px solid #0084d1;
   border-radius: 10px;
   -webkit-box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
           box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
@@ -1153,7 +1177,7 @@ section .contactForm form textarea {
   -webkit-box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
           box-shadow: inset 6px 6px 36px rgba(0, 0, 0, 0.2);
   outline: none;
-  border: 3px solid #d1c300;
+  border: 3px solid #0084d1;
 }
 
 section .contactForm form button {
@@ -1164,7 +1188,7 @@ section .contactForm form button {
   padding: 10px;
   border-radius: 10px;
   outline: none;
-  background: #d1c300;
+  background: #0084d1;
   color: #fff;
   font-size: 22px;
   margin-top: 30px;
@@ -1339,7 +1363,7 @@ section .contactForm form button {
   height: 50px;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 251, 0, 0.5);
+  background: rgba(0, 132, 209, 0.5);
   z-index: 101;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -1399,7 +1423,7 @@ section .contactForm form button {
 }
 
 .previewContainer .hamBTN-close {
-  background: #d1c300;
+  background: #0084d1;
   width: 50px;
   height: 50px;
   border: none;
