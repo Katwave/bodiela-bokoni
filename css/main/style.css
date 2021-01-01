@@ -917,7 +917,9 @@ section .aboutInfoContainer {
 
 section .aboutInfoContainer .aboutInfo {
   width: 80%;
-  height: 80vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,10 +1051,10 @@ section .aboutInfoContainer .aboutInfo .aboutText h2 {
     padding: 50px 0px 50px 0px;
   }
   section .aboutInfoContainer .aboutInfo .aboutText p {
-    text-align: left;
+    text-align: center;
   }
   section .aboutInfoContainer .aboutInfo .aboutText h2 {
-    text-align: left;
+    text-align: center;
   }
 }
 

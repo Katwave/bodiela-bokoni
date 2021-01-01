@@ -659,7 +659,7 @@ section {
 
     .aboutInfo {
       width: 80%;
-      height: 80vh;
+      height: fit-content;
       background: #fff;
       @include flexCenter(row);
       @include shadow();
@@ -739,10 +739,10 @@ section {
         padding: 50px 0px 50px 0px;
         .aboutText {
           p {
-            text-align: left;
+            text-align: center;
           }
           h2 {
-            text-align: left;
+            text-align: center;
           }
         }
       }
